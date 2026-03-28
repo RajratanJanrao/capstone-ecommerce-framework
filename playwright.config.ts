@@ -20,6 +20,8 @@ export default defineConfig({
   // 30 seconds timeout per test
   timeout: 30000,
 
+  snapshotPathTemplate: '{testDir}/{testFilePath}-snapshots/{arg}-{projectName}.png',
+
   use: {
     // Base URL for all tests
     // You can use page.goto('/') instead of full URL
