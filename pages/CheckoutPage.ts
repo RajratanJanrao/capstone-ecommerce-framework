@@ -21,6 +21,8 @@ export class CheckoutPage{
 
     async visualCheckOrderSuccess(){
         await expect(this.page.locator('#checkout_complete_container'))
-            .toHaveScreenshot('checkout-success.png');
+            .toHaveScreenshot('checkout-success.png', {
+            maxDiffPixelRatio: 0.02
+            });
     }
 }

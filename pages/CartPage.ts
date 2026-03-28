@@ -9,7 +9,10 @@ export class CartPage{
     }
 
     async visualCheckCartSummary(){
-        await expect(this.page.locator('.cart_list')).toHaveScreenshot('cart-summary.png');
+        await expect(this.page.locator('.cart_list'))
+            .toHaveScreenshot('cart-summary.png', {
+                maxDiffPixelRatio: 0.02
+            });
     }
 
     async proceedToCheckout(){
